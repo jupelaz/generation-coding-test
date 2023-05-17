@@ -21,8 +21,9 @@ public class CoordinatesController {
         return ResponseEntity.ok(response);
     }
     @PutMapping
-    public void updateFile(@Valid CoordinateRequest request) throws IOException {
+    public ResponseEntity<Object> updateFile(@Valid @RequestBody CoordinateRequest request) throws IOException {
         coordinateService.updateFile(request);
+        return ResponseEntity.ok().build();
     }
     @GetMapping
     public ResponseEntity<CoordinateResponse> sendFile() throws IOException {
@@ -30,7 +31,8 @@ public class CoordinatesController {
         return ResponseEntity.ok(response);
     }
     @DeleteMapping
-    public void deleteFile() throws IOException {
+    public ResponseEntity<Object> deleteFile() throws IOException {
         coordinateService.deleteFile();
+        return ResponseEntity.ok().build();
     }
 }

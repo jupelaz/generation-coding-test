@@ -1,0 +1,16 @@
+### Send POST request
+POST http://localhost:8443/api/coordinates
+
+### Send PUT request with json body
+PUT http://localhost:8443/api/coordinates
+Content-Type: application/json
+
+{
+  "x": 10,
+  "y": 11
+}
+### Send GET request
+GET http://localhost:8443/api/coordinates
+
+### Send DELETE request
+DELETE http://localhost:8443/api/coordinates
